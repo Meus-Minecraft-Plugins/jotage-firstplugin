@@ -1,0 +1,4 @@
+name: jotagefirstplugin
+version: '1.0'
+main: com.joaoguedes.jotagefirstplugin.Jotagefirstplugin
+api-version: '1.17'
