@@ -4,5 +4,5 @@ main: com.joaoguedes.jotagefirstplugin.Jotagefirstplugin
 api-version: '1.17'
 commands:
   firstplugintoggle:
-    description: Liga ou desliga o plugin.
-    usage: /firstplugintoggle
+    description: "Liga ou Desliga o plugin!"
+    usage: "/firstplugintoggle"

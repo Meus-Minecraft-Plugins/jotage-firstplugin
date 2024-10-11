@@ -9,6 +9,8 @@ public final class Jotagefirstplugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+
         Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "Plugin Enabled!");
 
         getServer().getPluginManager().registerEvents(new ItemPickupListener(this), this);
