@@ -24,6 +24,9 @@ public class TogglePluginCommand implements CommandExecutor {
                 } else if (strings[0].equals("desligar")) {
                     plugin.setNotifyPickupEnabled(false);
                     commandSender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("message-disabled")));
+                } else if (strings[0].equals("reload")) {
+                    plugin.reloadConfig();
+                    commandSender.sendMessage("§3[JotaGe-FirstPlugin] Reloaded!");
                 }
             }
         }
