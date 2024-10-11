@@ -3,6 +3,6 @@ version: '${project.version}'
 main: com.joaoguedes.jotagefirstplugin.Jotagefirstplugin
 api-version: '1.17'
 commands:
-  firstplugintoggle:
+  fp:
     description: "Liga ou Desliga o plugin!"
-    usage: "/firstplugintoggle"
+    usage: "/fp"

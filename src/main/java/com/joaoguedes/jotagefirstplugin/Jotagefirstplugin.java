@@ -15,7 +15,7 @@ public final class Jotagefirstplugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new ItemPickupListener(this), this);
 
-        getCommand("firstplugintoggle").setExecutor(new TogglePluginCommand(this));
+        getCommand("fp").setExecutor(new TogglePluginCommand(this));
     }
 
     public boolean isNotifyPickupEnabled() {
