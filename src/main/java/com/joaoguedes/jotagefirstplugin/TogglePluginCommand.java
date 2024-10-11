@@ -17,19 +17,28 @@ public class TogglePluginCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if (commandSender instanceof Player) {
-            if (strings.length == 1) {
-                if (strings[0].equals("ligar")) {
+            if (strings.length == 0) {
+                return false;
+            }
+            switch (strings[0]) {
+                case "ligar":
                     plugin.setNotifyPickupEnabled(true);
                     commandSender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("message-enabled")));
-                } else if (strings[0].equals("desligar")) {
+                    break;
+                case "desligar":
                     plugin.setNotifyPickupEnabled(false);
                     commandSender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("message-disabled")));
-                } else if (strings[0].equals("reload")) {
+                    break;
+                case "reload":
                     plugin.reloadConfig();
                     commandSender.sendMessage("§3[JotaGe-FirstPlugin] Reloaded!");
-                }
+                    break;
+                default:
+                    commandSender.sendMessage("§cComando desconhecido. Use: /fp <ligar | desligar | reload>");
+                    break;
             }
+            return true;
         }
-        return true;
+        return false;
     }
 }

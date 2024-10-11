@@ -5,4 +5,4 @@ api-version: '1.17'
 commands:
   fp:
     description: "Liga ou Desliga o plugin!"
-    usage: "/fp <ligar|desligar|reload>"
+    usage: "§c/fp <ligar | desligar | reload>"
