@@ -37,7 +37,9 @@ public class TogglePluginCommand implements CommandExecutor {
                     break;
             }
             return true;
+        } else {
+            commandSender.sendMessage("§3[JotaGe-FirstPlugin] O Comando pode ser executado apenas por players!");
+            return true;
         }
-        return false;
     }
 }
